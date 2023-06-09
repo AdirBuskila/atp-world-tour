@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ATP-Stats/static/css/main.081bfb61.css",
+    "main.js": "/ATP-Stats/static/js/main.b297b6bb.js",
+    "static/js/787.05f078b5.chunk.js": "/ATP-Stats/static/js/787.05f078b5.chunk.js",
+    "index.html": "/ATP-Stats/index.html",
+    "main.081bfb61.css.map": "/ATP-Stats/static/css/main.081bfb61.css.map",
+    "main.b297b6bb.js.map": "/ATP-Stats/static/js/main.b297b6bb.js.map",
+    "787.05f078b5.chunk.js.map": "/ATP-Stats/static/js/787.05f078b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.081bfb61.css",
+    "static/js/main.b297b6bb.js"
+  ]
+}
