@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import PlayerList from './PlayerList';
+import SearchBox from './SearchBox';
+import { fetchPlayerData } from './api';
 
-function App() {
+const App = () => {
+  const [players, setPlayers] = useState([]);
+  const [error, setError] = useState(null);
+
+  const handleSearch = async (playerName) => {
+    const playerData = await fetchPlayerData(playerName);
+    console.log('playerData');
+    console.log(playerData);
+
+    if (playerData) {
+      setPlayers([playerData]);
+      setError(null);
+    } else {
+      setPlayers([]);
+      setError('No player found with that name.');
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Tennis Player Information</h1>
+      <SearchBox onSearch={handleSearch} />
+      {console.log(players)}
+      {error && <p>{error}</p>}
+      {players.length > 0 && <PlayerList players={players} />}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,19 @@
+.player-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.player-list .player-card {
+  flex: 0 0 100%; /* take up full width on small screens */
+  max-width: 100%; /* take up full width on small screens */
+}
+
+/* Use a media query to adjust the layout on larger screens */
+@media (min-width: 768px) {
+  .player-list .player-card {
+    flex: 0 0 calc(33.3333% - 40px);
+    max-width: calc(33.3333% - 40px);
+  }
+}
