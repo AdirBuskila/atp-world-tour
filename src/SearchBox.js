@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
+import { players_list } from './demodata';
 
 const SearchBox = ({ onSearch }) => {
-  const [search, setSearch] = useState('');
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleChange = (event) => {
+    setSearchValue(event.target.value);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(search);
+    onSearch(searchValue);
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Search for a player...' />
+      <input list='players' type='text' value={searchValue} onChange={handleChange} placeholder='Search for a player...' />
+      <datalist id='players'>
+        {players_list.data.map((player, index) => (
+          <option key={index} value={player.Name} />
+        ))}
+      </datalist>
       <button type='submit'>Search</button>
     </form>
   );
