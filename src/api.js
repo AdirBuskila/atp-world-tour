@@ -2,8 +2,8 @@ import axios from 'axios';
 import { players_list } from './demodata';
 
 const headers = {
-  'X-RapidAPI-Key': '8a7b210df6mshc057a29ab12760fp17b82cjsnb2b84d78146d',
-  'X-RapidAPI-Host': 'ultimate-tennis1.p.rapidapi.com',
+  'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
+  'X-RapidAPI-Host': process.env.REACT_APP_RAPIDAPI_HOST,
 };
 
 export const fetchPlayerData = async (playerName) => {
