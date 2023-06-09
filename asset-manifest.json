@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/atp-world-tour/static/css/main.081bfb61.css",
-    "main.js": "/atp-world-tour/static/js/main.e82900a1.js",
+    "main.js": "/atp-world-tour/static/js/main.0902e96f.js",
     "static/js/787.05f078b5.chunk.js": "/atp-world-tour/static/js/787.05f078b5.chunk.js",
     "index.html": "/atp-world-tour/index.html",
     "main.081bfb61.css.map": "/atp-world-tour/static/css/main.081bfb61.css.map",
-    "main.e82900a1.js.map": "/atp-world-tour/static/js/main.e82900a1.js.map",
+    "main.0902e96f.js.map": "/atp-world-tour/static/js/main.0902e96f.js.map",
     "787.05f078b5.chunk.js.map": "/atp-world-tour/static/js/787.05f078b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.081bfb61.css",
-    "static/js/main.e82900a1.js"
+    "static/js/main.0902e96f.js"
   ]
 }
